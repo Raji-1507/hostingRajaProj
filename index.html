@@ -1,0 +1,1075 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hosting-navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+        </script> -->
+    <!-- <script>
+        $(function () {
+            $("#footer").load("footer.html");
+        });
+    </script> -->
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .login_btn {
+            background-color: #343a40;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 2px 4px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s background-color;
+        }
+
+        .login_btn:hover {
+            color: #cbd3da;
+        }
+
+        .navbar-toggler {
+            border: none;
+            font-size: 1.25rem;
+
+        }
+
+        .navbar-toggler-icon {
+            background-color: red;
+        }
+
+        .navbar-toggler:focus .btn-close:focus {
+            box-shadow: none;
+            outline: none;
+        }
+
+        .nav-link {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .break {
+            border-right: 1px solid black;
+            margin-top: 8px;
+            height: 30px;
+        }
+
+        .horizontal {
+            border-bottom: 3px solid rgb(192, 185, 185);
+            width: 100vw;
+        }
+
+        .bg_image {
+            background-image: url("https://img.freepik.com/free-vector/summer-sale-liquid-shape-banners_23-2148192804.jpg?w=740&t=st=1716468416~exp=1716469016~hmac=aa2035b45da91c3b168a4733ae52a9148bbf84ea9c91d4d7fd19617005762690");
+            background-size: 25%;
+            background-repeat: no-repeat;
+            background-position: 0px 80px;
+            position: absolute;
+            /* margin-top: 10px; */
+            margin-left: 20px;
+            left: 0;
+            z-index: -1;
+            width: 75%;
+            height: 75%;
+
+        }
+
+        .container_1 {
+            position: absolute;
+            top: 155px;
+            overflow: auto;
+        }
+
+        h2 {
+            text-shadow: 1px 1px rgba(28, 28, 28, .46);
+            font-weight: 700;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .title-red {
+            color: #de5327;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .search_field {
+            width: 50%;
+            box-shadow: 1px 1px 7px 2px #95918e;
+            margin: auto;
+            border-radius: 4px;
+
+        }
+
+        .small_box {
+            width: 6px;
+            height: 9px;
+            border: 1px;
+            background-color: red;
+        }
+
+        .details_box {
+            width: 50%;
+        }
+
+        .half-border {
+            width: 100%;
+            height: 100px;
+            position: relative;
+        }
+
+        .half-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #fca220 50%, #02b729 50%);
+        }
+
+        .stars i {
+            color: red;
+        }
+
+        .read_text {
+            font-size: 20px;
+            color: #de5327;
+            cursor: pointer;
+        }
+
+        .read_text:hover {
+            color: black;
+        }
+
+        input.form-control:focus {
+            box-shadow: none;
+        }
+         .details_container {
+            height: 100vh;
+            background-color: rgb(211, 207, 207);
+        }
+
+        .details_list ul li {
+            padding-bottom: 4px;
+        }
+        .break_footer {
+            border-bottom: 1px solid grey;
+            margin: 8px;
+            height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg  horizontal">
+            <div class="container ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="d-flex flex-column position-relative">
+                    <a class="navbar-brand pb-0 me-auto" href="#">
+                        <span style="font-weight: 600;font-size: 24px;">HOSTING</span>
+                        <span style="font-weight: 600;font-size: 24px; color:red;">RAJA</span>
+                        <span style="font-size: 14px;color: rgb(179, 172, 172); position: absolute;">
+                            ®
+                        </span>
+                    </a>
+                    <span style="font-size: 13px;font-weight: 500;">No.1 Indian Hosting Company</span>
+                    <span style="font-size: 13px; font-weight: 500;">ISO 9001:2015 Certified</span>
+                </div>
+                <div class="d-flex flex-column ">
+                    <div class=" d-none d-lg-block">
+                        <div class="d-flex gap-2 justify-content-end align-items-center me-4 my-2 ">
+                            <span style="color:#dc3545;font-weight: 600;font-size: 15px;">Tech Support:</span>
+                            <span style="color:#00008b;font-weight: 600;font-size: 15px;"> 080 6225 6100</span>
+                            <a href="#" class="login_btn">Login</a>
+                            <a href="#" class="login_btn">Register</a>
+                        </div>
+                    </div>
+                    <div class=" d-none d-lg-block mb-1">
+                        <div class="d-flex justify-content-end align-items-center gap-1 me-4">
+                            <span style="color:#dc3545;font-weight: 600;font-size: 15px;">New Sales Enquiry :</span>
+                            <span style="color:#00008b;font-weight: 600;font-size: 15px;"> 821 778 4838, 808 801 9021,
+                                636 030
+                                8610</span>
+                            <img style="width: 35px;"
+                                src="https://img.freepik.com/premium-vector/india-flag-vector_58388-145.jpg?">
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <div class="d-flex flex-column align-items-center position-relative">
+                                <a class="navbar-brand pb-0 me-auto" href="#">
+                                    <span style="font-weight: 600;font-size: 24px;">HOSTING</span>
+                                    <span style="font-weight: 600;font-size: 24px; color:red;">RAJA</span>
+                                    <span style="font-size: 14px;color: rgb(179, 172, 172); position: absolute;">
+                                        ®
+                                    </span>
+                                </a>
+                                <span style="font-size: 13px;font-weight: 500;">No.1 Indian Hosting Company</span>
+                                <span style="font-size: 13px; font-weight: 500;">ISO 9001:2015 Certified</span>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <div class="d-flex">
+                                        <a class="nav-link mx-lg-2 active" aria-current="page"
+                                            href="#"><b>Hosting</b></a>
+                                        <div class="break d-none d-lg-block"></div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="d-flex">
+                                        <a class="nav-link mx-lg-2 active" aria-current="page"
+                                            href="#"><b>Domains</b></a>
+                                        <div class="break d-none d-lg-block"></div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="d-flex">
+                                        <a class="nav-link mx-lg-2 active" aria-current="page" href="#"><b>Dedicated
+                                                Server</b></a>
+                                        <div class="break d-none d-lg-block"></div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="d-flex">
+                                        <a class="nav-link mx-lg-2 active" aria-current="page" href="#"><b>VPS</b></a>
+                                        <div class="break d-none d-lg-block"></div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="d-flex">
+                                        <a class="nav-link mx-lg-2 active" aria-current="page" href="#"><b>Cloud</b></a>
+                                        <div class="break d-none d-lg-block"></div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="d-flex">
+                                        <a class="nav-link mx-lg-2 active" aria-current="page"
+                                            href="#"><b>Servers</b></a>
+                                        <div class="break d-none d-lg-block"></div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="d-flex">
+                                        <a class="nav-link mx-lg-2 active" aria-current="page"
+                                            href="#"><b>Transfer</b></a>
+                                        <div class="break d-none d-lg-block"></div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2 active" aria-current="page" href="#"><b>Services</b></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- main -->
+    <div>
+        <div class="bg_image d-none d-lg-block">
+        </div>
+        <div class=" container_1 w-100">
+            <div class="row text-center ">
+                <h2 class="col-12">India’s Best Web Hosting Service Provider With Offers</h2>
+            </div>
+            <div class="col-12 title-red text-center ">
+                Trusted by over 1,50,000 customers
+            </div>
+            <h5 class="col-12 text-center "><b>Hosting from India’s No. 1 Web Hosting Company</b></h5>
+            <div class="col-12  title-red mb-3 text-center">Get FREE domain with Unlimited Hosting and Premium Plans
+            </div>
+            <div class=" col-12 my-2 search_field py-1 d-flex justify-content-between px-2 w-50">
+                <div class="w-100">
+                    <input class="form-control border-0 border-white bg-transparent " type="text"
+                        placeholder="Enter your domain name here..">
+                </div>
+                <div class="d-none d-md-block d-lg-block">
+                    <button class="btn btn-success text-white text-center">Search</button>
+                </div>
+            </div>
+            <div class="d-lg-none d-md-none d-sm-block text-center py-2">
+                <button class="btn btn-success text-white text-center">Search</button>
+            </div>
+            <div class=" row  d-flex justify-content-evenly align-content-sm-center mt-4 mx-5 ">
+                <div class="  col-12 col-sm-12 col-md-6 col-lg-4 text-center text-lg-start">
+                    <ul class="d-inline-block  list-unstyled" >
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b><a>Enterprise Hosting Services</a></b></li>
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b><a>Unlimited Hosting</a></b> </li>
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b><a>NVMe High-Speed Disk</a></b> </li>
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b><a>Free SSL Certificate</a></b></li>
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b><a>24/7 Customer Support</a></b></li>
+                    </ul>
+                </div>
+                <div class="  col-12 col-sm-12 col-md-6 col-lg-4 text-center text-lg-start">
+                    <ul class="d-inline-block  list-unstyled">
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b><a>WordPress Supported</a></b></li>
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b><a>Email Solutions</a></b></li>
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b><a>Website Builder</a></b></li>
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b><a>Linux &amp; Windows Assistance</a></b></li>
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b><a>Firewall &amp; Security</a></b></li>
+                    </ul>
+                </div>
+                <div class="  col-12 col-sm-12 col-md-6 col-lg-4 text-center text-lg-start">
+                    <ul class="d-inline-block  list-unstyled">
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b>FREE Control Panel</b></li>
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b>Domain Registration</b></li>
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b>Fully Cloud Platform</b></li>
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b>Secured Hosting Service</b></li>
+                        <li><label>
+                                <div class="small_box mx-2"></div>
+                            </label><b>Money-Back Guarantee</b></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="half-border"></div>
+            <div class=" row text-center my-4 mx-6 d-flex justify-content-evenly align-content-sm-center">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-2 mb-sm-2 ">
+                    <div style="font-size: 23px;"><b>Customers</b></div>
+                    <div style="font-size: 23px;"><b>Satisfaction</b></div>
+                </div>
+                <div class=" stars col-12 col-sm-12 col-md-3 col-lg-2 ">
+                    <div>
+                        <b>Trustpilot</b>
+                    </div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <p>4.5 | 213 reviews</p>
+                </div>
+                <div class=" stars col-12 col-sm-12 col-md-3 col-lg-2 ">
+                    <div>
+                        <b>Mouthshut</b>
+                    </div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <p>4.5 | 10,891 reviews</p>
+                </div>
+                <div class="stars col-12 col-sm-12 col-md-3 col-lg-2">
+                    <div>
+                        <b>HostingRaja</b>
+                    </div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <p>4.5 | 4,893 reviews</p>
+                </div>
+                <div class="stars col-12 col-sm-12 col-md-3 col-lg-2">
+                    <div>
+                        <b>Sitejabber</b>
+                    </div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <p>4.5 | 300 reviews</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <p style="font-size: 32px;"><b>Indian Hosting Plans</b></p>
+            </div>
+            <div style="font-size: 15px;margin: 25px;">
+                <p>HostingRaja is a top choice in the Indian hosting market, known for its wide range of tailored
+                    hosting solutions. We have a strong reputation for excellence and are a trusted partner for many
+                    websites. Our hosting packages cater to businesses of all sizes, from Shared Hosting for startups to
+                    <b style="color:#00008b;">VPS Hosting</b> for more heightened control. <b
+                        style="color:#00008b;">Dedicated Hosting</b> and <b style="color:#00008b;">Cloud Hosting</b> and
+                    specialized
+                    WordPress Hosting are also available for peak performance. With data centers in India, HostingRaja
+                    offers faster loading times for websites targeting an Indian audience. Our Expert support team is
+                    available in multiple Indian languages, and they prioritize security with features like free <b
+                        style="color:#00008b;">SSL
+                        certificates, DDoS protection.</b> HostingRaja offers affordable plans ideal for startups and
+                    small
+                    businesses, showcasing their commitment to providing quality hosting services for online success.
+                </p>
+            </div>
+            <div class=" row align-content-sm-center  g-2 m-4">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card text-center" style="width: 18rem;">
+                        <div class="container text-center w-50">
+                            <img src="https://image.hostingraja.in/images/home/shared-hosting-icon.webp"
+                                class="card-img-top " alt="image_1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: red;"><b>HA Cluster Hosting</b></h5>
+                            <p class="card-text" style="font-size: 15px;">One click setup & easy to use High
+                                Availability cluster servers with fully managed support</p>
+                            <p style="font-size: 25px;color: #00008b;"><b>Starting @ 9999</b></p>
+                            <a href="#" class="btn" style="background-color: green;color: white;">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card text-center" style="width: 18rem;">
+                        <div class="container text-center w-50">
+                            <img src="https://image.hostingraja.in/images/home/premium-hosting.webp"
+                                class="card-img-top " alt="image_1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: red;"><b>Premium Hosting</b></h5>
+                            <p class="card-text" style="font-size: 15px;">Unmetered Bandwidth Free SSL Certificate FREE
+                                Domain</p>
+                            <p style="font-size: 25px;color: #00008b;padding-top: 8px;"><b>Starting @ 226</b></p>
+                            <a href="#" class="btn" style="background-color: green;color: white;margin-top: 12px;">Get
+                                Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card text-center" style="width: 18rem;">
+                        <div class="container text-center w-50">
+                            <img src="https://image.hostingraja.in/images/home/domain-icon.webp" class="card-img-top "
+                                alt="image_1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: red;"><b>Domains .COM</b></h5>
+                            <p class="card-text" style="font-size: 15px;">Easy-to-use Control Panel Domain Theft
+                                Protection Free Domain Transfer</p>
+                            <p style="font-size: 25px;color: #00008b;"><b>Starting @ 693</b></p>
+                            <a href="#" class="btn" style="background-color: green;color: white;">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card text-center" style="width: 18rem;">
+                        <div class="container text-center w-50">
+                            <img src="https://image.hostingraja.in/images/home/home-wordpress-logo1.webp"
+                                class="card-img-top " alt="image_1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: red;"><b>WordPress Hosting</b></h5>
+                            <p class="card-text" style="font-size: 15px;">250+ Themes 3x speed with a Litespeed server
+                                Automatic Backup/Local copy</p>
+                            <p style="font-size: 25px;color: #00008b;"><b>Starting @ 99</b></p>
+                            <a href="#" class="btn" style="background-color: green;color: white;">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center py-2 mb-2">
+                <button class=" btn  text-white p-2 m-2 "
+                    style="background-color:#0058b7;width: 200px;font-size: 18px;"><b>Request a
+                        Free Trial</b></button>
+                <button class=" btn text-white p-2 m-2"
+                    style="background-color: black;width: 200px;font-size: 18px;"><b>Contact
+                        Sales</b></button>
+            </div>
+            <div class=" row align-content-sm-center  g-2 m-4">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card text-center" style="width: 18rem;">
+                        <div class="container text-center w-50">
+                            <img src="https://image.hostingraja.in/images/home/vps-hosting-logo.webp"
+                                class="card-img-top " alt="image_1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: red;"><b>VPS Hosting</b></h5>
+                            <p class="card-text" style="font-size: 15px;">FREE Website Optimization Better Speed with
+                                NVMe Cache Optimization</p>
+                            <p style="font-size: 25px;color: #00008b;"><b>Starting @ 549</b></p>
+                            <a href="#" class="btn" style="background-color: green;color: white;">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card text-center" style="width: 18rem;">
+                        <div class="container text-center w-50 mt-1">
+                            <img src="https://image.hostingraja.in/images/home/dedicated-server-logo.webp"
+                                class="card-img-top " alt="image_1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: red;"><b>Dedicated Hosting</b></h5>
+                            <p class="card-text" style="font-size: 15px;">High Performance FREE Migration Secured Panel
+                            </p>
+                            <p style="font-size: 25px;color: #00008b;padding-top: 8px;"><b>Starting @ 3299</b></p>
+                            <a href="#" class="btn" style="background-color: green;color: white;margin-top: 12px;">Get
+                                Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card text-center" style="width: 18rem;">
+                        <div class="container text-center w-50">
+                            <img src="https://image.hostingraja.in/images/home/cloud-icon1.webp" class="card-img-top "
+                                alt="image_1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: red;"><b>Cloud Hosting</b></h5>
+                            <p class="card-text" style="font-size: 15px;">Unlimited bandwidth Advanced Backup & Restore
+                                Auto Vertical/Horizontal Scaling</p>
+                            <p style="font-size: 25px;color: #00008b;"><b>Starting @ 1062</b></p>
+                            <a href="#" class="btn" style="background-color: green;color: white;">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card text-center" style="width: 18rem;">
+                        <div class="container text-center w-50">
+                            <img src="https://image.hostingraja.in/images/home/java1.webp" class="card-img-top "
+                                alt="image_1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: red;"><b>Java Hosting</b></h5>
+                            <p class="card-text" style="font-size: 15px;">Unmetered Bandwidth Unlimited Emails <b
+                                    style="color:#00008b;">Free Control Panel</b></p>
+                            <p style="font-size: 25px;color: #00008b;"><b>Starting @ 299</b></p>
+                            <a href="#" class="btn" style="background-color: green;color: white;margin-top: 18px;">Get
+                                Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-4">
+                <div class=" col-12 col-md-12 col-lg-6 text-center ">
+                    <img src="https://image.hostingraja.in//images/premium-hosting/google.webp" alt="google_img">
+                    <p>Source: Google.com</p>
+                </div>
+                <div class="text-center  col-12 col-md-12 col-lg-6" style="font-size: 15px;">
+                    <div class="h6 text-dark fw-bold">Why page performance matters</div>
+                    <span style="margin-right: 7px;">
+                        <img src="https://image.hostingraja.in/images/icons/blue-quotes-left.webp" alt="Quote Left"
+                            width="16" height="16">
+                    </span>Longer page load times have a severe effect on bounce rates. For example:
+                    If page load time increases from 1 second to 3 seconds, bounce rate increases 32%
+                    If page load time increases from 1 second to 6 seconds, bounce rate increases by 106%
+                    <span style="margin-left: 7px;">
+                        <img src="https://image.hostingraja.in/images/icons/blue-quotes-right.webp" alt="Quote Right"
+                            width="16" height="16">
+                    </span>
+                </div>
+            </div>
+            <div class="row text-sm-center m-4">
+                <div class="col-12 fw-normal text-center h2 text-dark ">What our Customers Say</div>
+                <div class="col-12 col-md-6  col-lg-6  text-center my-3" style="font-size: 15px;">
+                    <img src="https://image.hostingraja.in/images/testimonial/manjeetshergill.webp" alt=" Client-1">
+                    <div class="mt-3 fs-5 fw-bolder" style="color: #69814f;">Manjeet Shergill</div>
+                    <div class="fw-bolder h6 mb-3 text-dark mt-2 ">(Founder)</div>
+                    I’ve been associated with Hosting Raja since 2017 and it has been a great experience for me. My
+                    agency has been using their servers, hosting plans and domains extensively for our customers as well
+                    for our own business. Our account manager at Hosting Raja is excellent in terms of communication
+                    &amp; support as well as their pricing and specifications are highly competitive. I would DEFINITELY
+                    RECOMMEND you to go ahead with Hosting Raja.
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 text-center my-3" style="font-size: 15px;"><img
+                        src="https://image.hostingraja.in/images/testimonial/saminuddin.webp" alt=" Client-2">
+                    <div class="mt-3 fs-5  fw-bolder" style="color: #69814f;">Saminuddin</div>
+                    <div class="fw-bolder h6 mb-3 text-dark mt-2">(Head Network Operation)</div>
+                    Three things attract towards HostingRaja: 1. Value for money which one wont get anywhere else. 2.
+                    Most dedicated after tech support, you can find them – any time of the day when there’s an issue.
+                    Its the tech support which is impressive 3. Having a good communication with account manger, who
+                    helps me in all the way i need help in technically and on sales too he is in touch with me in
+                    personally thank you and kudo’s to Hosting raja.
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 text-center my-3" style="font-size: 15px;"><img
+                        src="https://image.hostingraja.in/images/testimonial/manoj_agarwal.webp" alt=" Clients-3">
+                    <div class="mt-3 fs-5 fw-bolder" style="color: #69814f;">Manoj Agarwal</div>
+                    <div class="fw-bolder h6 mb-3 text-dark mt-2">(CEO)</div>
+                    I’ve been hosting my business sites with HostingRaja for more than two years now. I found this as an
+                    excellent hosting company with the most affordable costs. Pages have consistently been up and
+                    haven’t had any complaints from my clients about the websites being slow. Don’t have much experience
+                    with their support, however, the couple of straightforward inquiries I have had have consistently
+                    been replied to in less than 15 minutes. I have been <b><a
+                            href="https://www.hostingraja.review">EXTREMELY SATISFIED</a></b> with all parts of their
+                    hosting services.
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 text-center my-3" style="font-size: 15px;"><img
+                        src="https://image.hostingraja.in/images/testimonial/analytical-investments-director.webp"
+                        alt=" Clients-4">
+                    <div class="mt-3 fs-5 fw-bolder" style="color: #69814f;">Mr. R K Bhatnagar</div>
+                    <div class="fw-bolder h6 mb-3 text-dark mt-2">(Founder &amp; CEO)</div>
+                    If you are looking for a web host that really cares how well your site does then come to
+                    “HostingRaja”. It is the best out there HANDS DOWN!! for all the support they have provided us. And
+                    they are more of customers oriented. It is also most convenient and best option for our needs. With
+                    them all our requirements were met perfectly.
+                </div>
+            </div>
+            <h3 class="col-12 text-center fs-4"><b>HostingRaja FAQ’s</b></h3>
+            <div class="card m-2 mx-4">
+                <div class="card-header" style="background-color: #eee;border: 1px solid #e2e2e2;">
+                    <button style="border: none;text-align:start;width: 100%;" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                        <b>What is Web Hosting?</b>
+                    </button>
+                </div>
+                <div class="collapse.show" id="collapseExample1">
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 15px;">Web hosting is a service which allows the
+                            organizations and individuals to
+                            publish a website on the internet. In simple terms, <b>web hosting services</b> is a
+                            business and it
+                            offers the technologies required for the website to be viewed on the internet. Most probably
+                            the
+                            websites or web pages are hosted and saved on a special computer known as servers.</p>
+                        <p>If you want your website/business to be published online, your business website would require
+                            a
+                            web hosting service. However, here at HostingRaja business owners are provided with more
+                            than
+                            just web hosting services! For example, <b>we employ our own in-house technicians to make
+                                sure your
+                                websites are up and running 24/7.</b></p>
+                        <p>We also help website owners who are in need of troubleshooting their websites if any problem
+                            arises. We are a professional web hosting service provider ensuring that you have a
+                            hassle-free
+                            experience, so that you can efficiently focus your time and effort on your business and we
+                            take
+                            care of your website.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card m-2 mx-4">
+                <div class="card-header" style="background-color: #eee;border: 1px solid #e2e2e2;">
+                    <button style="border:none;text-align:start;width:100%;" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                        <b>Are you an Indian web hosting company? I.e are you hosting all your websites in India?</b>
+                    </button>
+                </div>
+                <div class="collapse" id="collapseExample2">
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 15px;">Indeed, we are a 100% <b>Indian web hosting
+                                company</b>
+                            i.e We have every one of our clients’ sites in Indian DataCenter. Probably the greatest
+                            benefit of picking us is that your site will remain SEO friendly(i.e better possibilities of
+                            your site being positioned on top of search engine) as you will be given a very quick
+                            loading time.</p>
+                        <p>Once you start Hosting your website with us, you will be noticing a super fast FTP
+                            connection. The main reason is because we provide a very low latency rate, which will help
+                            your website to load super fast.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card m-2 mx-4">
+                <div class="card-header" style="background-color: #eee;border: 1px solid #e2e2e2;">
+                    <button style="border: none;text-align:start;width: 100%;" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample3" type="button" aria-expanded="false"
+                        aria-controls="collapseExample3">
+                        <b>Can you help me to host a website?</b>
+                    </button>
+                </div>
+                <div class="collapse" id="collapseExample3">
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 15px;">We will certainly <span
+                                style="color: #0058b7;">help you to host your website</span>.
+                            Once you contact us for Hosting your website, we will help you step by step making your
+                            website live on the internet as fast as possible. Please contact our support team using the
+                            support page. Being one of the best companies in India, It is our responsibility to guide
+                            our customers.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card m-2 mx-4">
+                <div class="card-header" style="background-color: #eee;border: 1px solid #e2e2e2;">
+                    <button style="border: none;text-align:start;width: 100%;" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample4" type="button" aria-expanded="false"
+                        aria-controls="collapseExample4">
+                        <b>When is the right time to buy web hosting plans from HostingRaja?</b>
+                    </button>
+                </div>
+                <div class="collapse" id="collapseExample4">
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 15px;">When you’re ready to get online and get started
+                            with creating a digital presence for your brand, buy web hosting and other services from
+                            HostingRaja. You can get domain registration from HostingRaja as well and also buy added
+                            security features and business email plans to build a secure and diverse digital footprint.
+                            Buy web hosting plans and services from HostingRaja when you’re all set to go live and
+                            present yourself to your online audience.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card m-2 mx-4">
+                <div class="card-header" style="background-color: #eee;border: 1px solid #e2e2e2;">
+                    <button style="border: none;text-align:start;width: 100%;" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample5" type="button" aria-expanded="false"
+                        aria-controls="collapseExample5">
+                        <b>Can I start with Rs. 99 hosting plan now and later upgrade to premium or unlimited ?</b>
+                    </button>
+                </div>
+                <div class="collapse" id="collapseExample5">
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 15px;">Yes, you can start with our Rs.99 hosting plan and
+                            then upgrade to premium or unlimited when the need arises. However we suggest you to go with
+                            <b> unlimited and premium hosting plans</b> to get better service with better CPU/RAM
+                            usages.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card m-2 mx-4">
+                <div class="card-header" style="background-color: #eee;border: 1px solid #e2e2e2;">
+                    <button style="border: none;text-align:start;width: 100%;" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample6" type="button" aria-expanded="false"
+                        aria-controls="collapseExample6">
+                        <b>What will be the limit for my accounts related to the email accounts and the number of
+                            websites?</b>
+                    </button>
+                </div>
+                <div class="collapse" id="collapseExample6">
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 15px;">There is no constraint on the Email accounts and
+                            the website hosted by you with our unlimited and premium plans. But if you are utilizing
+                            Gold and Silver plans there will be some limitations. The server proposed to you can be
+                            totally utilized with no limitation. And furthermore can add the number of sites depending
+                            on the situation identified with the RAM, CPU, and <span style="color: #0058b7;">inode
+                                constraints..</span></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card m-2 mx-4">
+                <div class="card-header" style="background-color: #eee;border: 1px solid #e2e2e2;">
+                    <button style="border: none;text-align:start;width: 100%;" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample7" type="button" aria-expanded="false"
+                        aria-controls="collapseExample7">
+                        <b>Will my website be secured?</b>
+                    </button>
+                </div>
+                <div class="collapse" id="collapseExample7">
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 15px;">With regards to site security, HostingRaja has one
+                            of the most extraordinary highlights and gives the best need. You can have confidence that
+                            we give the most secured servers when contrasted with other hosting providers in India.
+                            Users in India can buy the servers from us with better certainty when the point is the
+                            security of the servers.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card m-2 mx-4">
+                <div class="card-header" style="background-color: #eee;border: 1px solid #e2e2e2;">
+                    <button style="border: none;text-align:start;width: 100%;" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample8" type="button" aria-expanded="false"
+                        aria-controls="collapseExample8">
+                        <b>What are the benefits that HostingRaja web hosting brings to you?</b>
+                    </button>
+                </div>
+                <div class="collapse" id="collapseExample8">
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 15px;">Over the years HostingRaja has established itself
+                            as a trusted web hosting service provider. With years of experience and a large pool of
+                            happy customers, HostingRaja brings multiple benefits to all its customers. Apart from
+                            different other web hosting and domain hosting plans that are tailored to assist you to
+                            grow, you also benefit from: 24X7 Support via phone, chat, and email. 99.9% Uptime
+                            Affordable web hosting packages Expert help</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card m-2 mx-4">
+                <div class="card-header" style="background-color: #eee;border: 1px solid #e2e2e2;">
+                    <button style="border: none;text-align:start;width: 100%;" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample9" type="button" aria-expanded="false"
+                        aria-controls="collapseExample9">
+                        <b>Will I get a free SSL certificate for my site?</b>
+                    </button>
+                </div>
+                <div class="collapse" id="collapseExample9">
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 15px;">Yes, absolutely we give a free SSL certificate
+                            along with our unlimited and premium packages. Get to know more about the SSL certificate.
+                            Please learn more about SSL here.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card m-2 mx-4">
+                <div class="card-header" style="background-color: #eee;border: 1px solid #e2e2e2;">
+                    <button style="border: none;text-align:start;width: 100%;" data-bs-toggle="collapse"
+                        data-bs-target="#collapseCard" type="button" aria-expanded="false" aria-controls="collapseCard">
+                        <b>How to begin with HostingRaja’s hosting plans in India?</b>
+                    </button>
+                </div>
+                <div class="collapse" id="collapseCard">
+                    <div class="card-body">
+                        <ul class="card-text" style="font-size: 15px;">
+                            <li>Getting started with HostingRaja’s web hosting plan is very simple. Literally, in just
+                                three simple actions you can go online, all you need to do is: Choose a web hosting plan
+                                that best suits your needs.</li>
+                            <li>Pick a suitable domain name.</li>
+                            <li>Upload your website files or start building a new website.</li>
+                            <li>That’s it! You’re up and running.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row m-4">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-4">
+                    <div class="d-flex flex-column gap-2">
+                        <p style="font-size: 32px;"><b>You are in a <span style="color: #dc3545;">Trusted</span>
+                                Company</b>
+                        <p>
+                            <span style="font-size: 15px;">Some of our 1,50,000+ Happy Customers</span>
+                        <div>
+                            <img src="https://image.hostingraja.in/images/articles/our-customers/hostingraja-happy-customer-one.webp"
+                                alt="edu_img1">
+                            <img src="https://image.hostingraja.in/images/articles/our-customers/hostingraja-happy-customer-two.webp"
+                                alt="edu_img2">
+                            <img src="https://image.hostingraja.in/images/articles/our-customers/hostingraja-happy-customer-three.webp"
+                                alt="edu_img3">
+                            <img src="https://image.hostingraja.in/images/articles/our-customers/hostingraja-happy-customer-four.webp"
+                                alt="edu_img4">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-4">
+                    <div class="d-flex flex-column gap-2">
+                        <p style="font-size: 32px;"><b><span style="color: #dc3545;">2,00,628 </span>customers liked us
+                                on Facebook</b></p>
+                        <img src="https://image.hostingraja.in/images/fb-like.webp" alt="fb-img1" width="425"
+                            height="272">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center m-4">
+                <p class="read_text"><b>Read More >></b></p>
+            </div>
+
+            <!-- footer -->
+            <footer>
+                <div class=" col-12  border border-0 py-4 d-flex justify-content-center"
+                    style="background-color: #de5327;">
+                    <span style="font-size: 26px;font-weight: 500;color:white">Need Help With Price? </span>
+                    <span class="bg-warning h3 px-2 text-dark ms-2">Contact Our Experts</span>
+                </div>
+                <div class="details_container w-100 h-100">
+                    <div class="row  py-4 d-flex  align-content-sm-center ">
+                        <div class=" details_list col-12 col-sm-12 col-md-6 col-lg-3 text-center text-lg-start">
+                            <span
+                                style="color: #ef4410;font-size: 18px;font-weight: 600; padding-left: 32px;">Hosting</span>
+                            <ul style="list-style: none;font-size: 14px;">
+                                <li>Web Hosting</li>
+                                <li>Premium Hosting</li>
+                                <li>WordPress Hosting</li>
+                                <li>Java Hosting</li>
+                                <li>Windows Hosting</li>
+                                <li>Reseller Hosting</li>
+                                <li>Unlimited Hosting</li>
+                                <li>Ecommerce Hosting</li>
+                                <li>cPanel Hosting</li>
+                            </ul>
+                        </div>
+                        <div class=" details_list col-12 col-sm-12 col-md-6 col-lg-3 text-center text-lg-start">
+                            <span
+                                style="color: #ef4410;font-size: 18px;font-weight: 600;padding-left: 32px;">Domains</span>
+                            <ul style="list-style: none;font-size: 14px;">
+                                <li>Domain</li>
+                                <li>.IN Domain</li>
+                                <li>WordPress Hosting</li>
+                                <li>.IO Domain</li>
+                                <li>.COM Domain</li>
+                                <li>.NET Domain</li>
+                                <li>.AI Domain</li>
+                                <li>.ORG Domain</li>
+                                <li>.CO.IN Domain</li>
+                            </ul>
+                        </div>
+                        <div class=" details_list col-12 col-sm-12 col-md-6 col-lg-3 text-center text-lg-start">
+                            <span style="color: #ef4410;font-size: 18px;font-weight: 600;padding-left: 32px;">Dedicated
+                                Servers</span>
+                            <ul style="list-style: none;font-size: 14px;">
+                                <li>Linux Dedicated</li>
+                                <li>Enterprise Dedicated</li>
+                                <li>WordPress Hosting</li>
+                                <li>Windows Dedicated</li>
+                                <li>HA Cluster Dedicated</li>
+                                <li>Free Control Panel Dedicated</li>
+                            </ul>
+                        </div>
+                        <div class="details_list col-12 col-sm-12 col-md-6 col-lg-3 text-center text-lg-start">
+                            <span
+                                style="color: #ef4410;font-size: 18px;font-weight: 600;padding-left: 32px;">Cloud</span>
+                            <ul style="list-style: none;font-size: 14px;">
+                                <li>Cloud</li>
+                                <li>HA Cloud</li>
+                                <li>Private Cloud</li>
+                                <li>Cloud Migration</li>
+                                <li>AWS Cloud</li>
+                                <li>Cloud Storage</li>
+                                <li>Cloud Office</li>
+                                <li>S3 Object Cloud Storage</li>
+                            </ul>
+                        </div>
+                        <div class="details_list col-12 col-sm-12 col-md-6 col-lg-3 text-center text-lg-start">
+                            <span
+                                style="color: #ef4410;font-size: 18px;font-weight: 600;padding-left: 32px;">Transfer</span>
+                            <ul style="list-style: none;font-size: 14px;">
+                                <li>Servers / Hosting Transfer</li>
+                            </ul>
+                        </div>
+                        <div class=" details_list col-12 col-sm-12 col-md-6 col-lg-3 text-center text-lg-start">
+                            <span style="color: #ef4410;font-size: 18px;font-weight: 600;padding-left: 32px;">VPS</span>
+                            <ul style="list-style: none;font-size: 14px;">
+                                <li>Linux VPS</li>
+                                <li>Enterprise VPS</li>
+                                <li>Windows VPS</li>
+                                <li>HA Cluster VPS</li>
+                                <li>Free Control Panel VPS</li>
+                            </ul>
+                        </div>
+                        <div class="details_list col-12 col-sm-12 col-md-6 col-lg-3 text-center text-lg-start">
+                            <span
+                                style="color: #ef4410;font-size: 18px;font-weight: 600;padding-left: 32px;">Servers</span>
+                            <ul style="list-style: none;font-size: 14px;">
+                                <li>Laravel Servers</li>
+                                <li>Nodejs Servers</li>
+                                <li>React Servers</li>
+                                <li>Python Servers</li>
+                                <li>MongoDB Servers</li>
+                                <li>AngularJS Servers</li>
+                                <li>ERP Servers</li>
+                            </ul>
+                        </div>
+                        <div class="details_list col-12 col-sm-12 col-md-6 col-lg-3 text-center text-lg-start">
+                            <span
+                                style="color: #ef4410;font-size: 18px;font-weight: 600;padding-left: 32px;">Services</span>
+                            <ul style="list-style: none;font-size: 14px;">
+                                <li>G Suite</li>
+                                <li>Kubernetes</li>
+                                <li>AWS Managed</li>
+                                <li>Acronis Backup</li>
+                                <li>Database Cluster</li>
+                                <li>Disaster Recovery</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-sm-center text-md-center text-lg-start ">
+                            <div class="d-flex flex-column position-relative ms-5 ">
+                                <a class="text-black text-decoration-none text-sm-center text-md-center text-lg-start  pb-0  "
+                                    href="#">
+                                    <span style="font-weight: 600;font-size: 24px;">HOSTING</span>
+                                    <span style="font-weight: 600;font-size: 24px; color:red;">RAJA</span>
+                                    <span style="font-size: 14px;color: rgb(179, 172, 172); position: absolute;">
+                                        ®
+                                    </span>
+                                </a>
+                                <span style="font-size: 13px;font-weight: 500;">No.1 Indian Hosting Company</span>
+                                <span style="font-size: 13px; font-weight: 500;">ISO 9001:2015 Certified</span>
+                                <div class="my-2">
+                                    <i class="bi bi-facebook fs-3"></i>
+                                    <i class="bi bi-instagram fs-3 px-2"></i>
+                                    <i class="bi bi-twitter fs-3 px-2"></i>
+                                    <i class="bi bi-linkedin fs-3 "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" text-sm-center text-lg-start  fw-bold fs-4 text-black-50 mb-2 mx-5">Our Hosting Awards
+                    </div>
+
+                    <div
+                        class=" row d-flex justify-content-around align-content-lg-start align-items-sm-center align-content-sm-center mx-4 my-2">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 gap-2 d-flex  align-content-sm-center">
+                            <img style="width: 100px;height: 100px;"
+                                src="https://image.hostingraja.in/images/icons/hr-hosting-awards.webp" alt="image_1">
+                            <img style="width: 100px;height: 80px;"
+                                src="https://image.hostingraja.in/images/devs-choice-minimal.webp" alt="image_1">
+                            <img style="width: 150px;height: 80px;" src="https://image.hostingraja.in/images/iso.webp"
+                                alt="image_2">
+
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 d-flex align-content-sm-center gap-4">
+                            <span style="font-size: 15px;word-spacing: 2px;">
+                                About-Us | Report Abuse | Report Spam | Report Complaints | Report Phishing | Report
+                                Scam |
+                                Report Malware | Report Escalation
+                                Login | Sitemap | Register | Forgot Password| Payment Method| Special Offers| Affiliates
+                                |
+                                Review
+                                ICANN Registrant Benefits and Responsibilities Specification | ICANN Registrant Benefits
+                                and
+                                Responsibilities Specification.</span>
+                        </div>
+                    </div>
+                    <div class="break_footer">
+                    </div>
+                    <div class="  d-flex justify-content-between text-black-50 my-2 mx-5 fs-6 gap-4">
+                        <span>
+                            2024 HostingRajaTM. All Rights Reserved
+                        </span>
+                        <span>Terms Of Service | Privacy Policy | Acceptable Use Policy | Refund Policy |
+                            Live Chat | Contact Us</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
